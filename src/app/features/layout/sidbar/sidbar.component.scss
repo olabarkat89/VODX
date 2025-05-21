@@ -1,0 +1,36 @@
+.header {
+  background: #fff;
+  img {
+    width: 65%;
+    margin-top: 0.7rem;
+  }
+  .title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #a5b3cd;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      color: #808ea7;
+      margin-top: 1rem;
+      svg {
+        margin-inline-end: 0.4rem;
+        stroke: #808ea7;
+      }
+    }
+  }
+  .activeLINK {
+    background: #6e62e5;
+    padding: 0.5rem;
+    border-radius: 12px;
+    color: #fff !important;
+    svg {
+      stroke: #fff !important;
+    }
+  }
+}

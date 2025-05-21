@@ -1,0 +1,44 @@
+.callValue {
+  .title {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #6e62e5;
+  }
+  .cards {
+    display: flex;
+    border: none;
+    border-radius: 24px;
+    padding: 1rem;
+    background: #fff;
+    align-items: center;
+    img {
+      width: 48px;
+      height: 48px;
+    }
+    .info {
+        margin-inline-start: 0.5rem;
+      p {
+        color: #808ea7;
+        font-size: 14px;
+      }
+      strong{
+        font-size: 20px;
+      }
+      .incoming {
+        color: #16181D
+    }
+    .answered{
+        color: #10A376;
+    }
+     .abandoned{
+        color: #D55357;
+    }
+    .duration{
+        color: #16181D;
+    }
+    }
+    
+  }
+}
