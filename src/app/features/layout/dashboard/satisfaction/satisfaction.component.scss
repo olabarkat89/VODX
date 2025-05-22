@@ -1,0 +1,18 @@
+:host ::ng-deep{
+    .apexcharts-datalabel, .apexcharts-datalabel-label, .apexcharts-datalabel-value, .apexcharts-datalabels, .apexcharts-pie-label {
+    cursor: default;
+    pointer-events: none;
+    display: none;
+}
+.apexcharts-legend.apx-legend-position-bottom.apexcharts-align-left, .apexcharts-legend.apx-legend-position-top.apexcharts-align-left, .apexcharts-legend.apx-legend-position-right, .apexcharts-legend.apx-legend-position-left {
+ 
+    display: none;
+}
+.apexcharts-canvas {
+ 
+    background: #fff;
+    border-radius: 24px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+}

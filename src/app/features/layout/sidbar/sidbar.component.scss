@@ -34,3 +34,20 @@
     }
   }
 }
+@media (max-width: 500px) {
+  .header {
+    img {
+      width: 100%;
+      }
+      .title ,span{
+        display: none;
+      }
+      li{
+        width: fit-content;
+        svg{
+          margin-inline-end: 0 !important;
+        }
+      }
+    
+  }
+}
