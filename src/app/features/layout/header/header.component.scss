@@ -1,4 +1,11 @@
 header {
+  .bi-search{
+        padding-inline-start: 0.8rem;
+    position: absolute;
+    padding-top: 0.6rem;
+    color: #808EA7;
+}
+  
   .search-input {
     padding: 0.8rem 1rem;
     border: none;
@@ -6,6 +13,12 @@ header {
     height: 48px;
     outline: none;
     width: 30%;
+     color: #808EA7;
+        padding-inline-start: 2.1rem;
+           &::placeholder{
+          color: #808EA7;
+          font-size: 14px;
+        }
     @media(max-width:500px){
         width: 70%;
     }
@@ -16,12 +29,12 @@ header {
     cursor: pointer;
   }
   .notification {
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     margin-inline-end: 0.5rem;
   }
   .lang {
-    height: 48px;
+    height: 50px;
     width: auto;
     padding: 0.9rem;
      margin-inline-end: 0.5rem; 
@@ -33,14 +46,14 @@ header {
     }
     .user-dropdown {
       img {
-        width: 40px;
-        height: 40px;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
         border: 3px solid #13c38e;
       }
       .user-info {
-        .user-name {
-          color: #6e62e5;
+         line-height: 13px;
+        .user-name {     
           margin-inline-start: 0.5rem;
           font-size: 12px;
         }
@@ -49,6 +62,11 @@ header {
           margin-inline-start: 0.5rem;
           font-size: 12px;
         }
+        .bi-chevron-down::before {
+
+    font-weight: 600 !important;
+    font-size: 12px;
+}
       }
     }  }
 }

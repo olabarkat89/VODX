@@ -1,7 +1,4 @@
-.d-flex {
-  display: flex;
-  height: 100vh;
-}
+
 
 /* Sidebar */
 .sidebar {
@@ -11,9 +8,9 @@
 
 /* Main Content */
 .main-content {
-    background: #f8f8f9;
   flex: 1;
   transition: margin-left 0.3s ease;
+   width: calc(100% - 240px);
 }
 
 /* Media Query for Mobile View */
@@ -21,4 +18,8 @@
   .sidebar {
     width: 60px;
   }
+  .main-content {
+
+   width: calc(100% - 60px);
+}
 }

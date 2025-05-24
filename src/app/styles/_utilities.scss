@@ -1,0 +1,37 @@
+@use './variables';
+.text-primary-color {
+  color: variables.$primary-text-color;
+}
+
+.text-secondary-color {
+  color: variables.$secondary-text-color;
+}
+.third-text-color {
+  color: variables.$third-text-color;
+}
+.text-gray-color {
+  color: variables.$text-gray-color;
+}
+.text-primaryGreen-color {
+  color: variables.$text-primaryGreen-color;
+}
+.text-drak-color {
+  color: variables.$text-drak-color;
+}
+.text-red-color {
+  color: variables.$text-red-color;
+}
+.text-secondred-color{
+  color: variables.$text-secondred-color;
+}
+.text-redWhite-color {
+  color: variables.$text-redWhite-color;
+}
+.text-white-color {
+  color: variables.$text-white-color;
+}
+.text-green-color {
+  color: variables.$text-green-color;
+}.text-grayWhite-color {
+  color: variables.$text-grayWhite-color;
+}

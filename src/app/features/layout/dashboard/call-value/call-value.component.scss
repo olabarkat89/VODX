@@ -3,8 +3,16 @@
     font-weight: 600;
     font-size: 2rem;
     line-height: 100%;
-    letter-spacing: 0%;
-    color: #6e62e5;
+  }
+  .filter {
+    span {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .bi-chevron-down::before {
+      font-weight: 600 !important;
+      font-size: 12px;
+    }
   }
   .cards {
     display: flex;
@@ -18,27 +26,13 @@
       height: 48px;
     }
     .info {
-        margin-inline-start: 0.5rem;
+      margin-inline-start: 0.5rem;
       p {
-        color: #808ea7;
         font-size: 14px;
       }
-      strong{
+      strong {
         font-size: 20px;
       }
-      .incoming {
-        color: #16181D
     }
-    .answered{
-        color: #10A376;
-    }
-     .abandoned{
-        color: #D55357;
-    }
-    .duration{
-        color: #16181D;
-    }
-    }
-    
   }
 }

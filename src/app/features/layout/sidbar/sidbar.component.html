@@ -1,11 +1,12 @@
 <div class="header py-3 px-2 p-lg-3">
+  <div class="content">
   <img
     src="../../../../assets/images/Logo/vodxLogo.svg"
     alt="logo"
     class="logo"
     srcset=""
   />
-  <h5 class="title mt-4">Manage</h5>
+  <h5 class="title mt-4">{{"Manage"|translate}}</h5>
   <ul>
     <li [routerLink]="['/']" routerLinkActive="activeLINK">
       <svg
@@ -29,7 +30,7 @@
           stroke-linejoin="round"
         />
       </svg>
-      <span>Dashboard</span>
+      <span>{{'Dashboard'|translate}}</span>
       
     </li>
     <li>
@@ -111,7 +112,7 @@
           stroke-linejoin="round"
         />
       </svg>
-      <span>Calendar</span>
+      <span>{{'Calendar'|translate}}</span>
     </li>
     <li>
       <svg
@@ -136,7 +137,7 @@
           stroke-linejoin="round"
         />
       </svg>
-      <span>History</span>
+      <span>{{'History'|translate}}</span>
     </li>
     <li>
       <svg
@@ -161,7 +162,7 @@
           stroke-linejoin="round"
         />
       </svg>
-      <span>Users</span>
+      <span>{{'Users'|translate}}</span>
       
     </li>
     <li>
@@ -187,7 +188,12 @@
           stroke-linejoin="round"
         />
       </svg>
-      <span>Settings</span>
+      <span>{{"Settings"|translate}}</span>
     </li>
   </ul>
+</div>
+  <div class="logot">
+    <img src="../../../../assets/images/icons/logout.svg" alt="logout" srcset="">
+    <span class="text-secondred-color p-2">{{'LogOut'|translate}}</span>
+  </div>
 </div>

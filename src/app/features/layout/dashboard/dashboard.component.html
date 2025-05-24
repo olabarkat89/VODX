@@ -1,17 +1,24 @@
 <app-call-value></app-call-value>
 <div class="container-fluid">
-    <div class="col-lg-9">
-       <div class="row">
-        <div class="col-8">
-<app-propensity-call></app-propensity-call>
-        </div>
-         <div class="col-4">
-            
-<app-satisfaction></app-satisfaction>
-        </div>
-       </div>
+    <div class="row">
+  <div class="col-12 col-lg-9">
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <app-propensity-call></app-propensity-call>
+        <app-call-history-table></app-call-history-table>
+      </div>
+      <div class=" col-12 col-lg-4">
+        <app-satisfaction></app-satisfaction>
+        <app-limit></app-limit>
+        <app-geography></app-geography>
+      </div>
     </div>
-     <div class="col-lg-3">
-
+  </div>
+  <div class="col-12 col-lg-3 ">
+    <div class="cardStyle mt-3">
+        <app-call-que></app-call-que>
+        <app-emergency-call></app-emergency-call>
     </div>
+  </div>
+  </div>
 </div>

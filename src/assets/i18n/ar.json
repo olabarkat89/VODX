@@ -1,0 +1,15 @@
+{
+  "Manage": "إدارة",
+  "Dashboard": "لوحة التحكم",
+  "Calendar": "التقويم",
+  "History": "السجل",
+  "Users": "المستخدمون",
+  "Settings": "الإعدادات",
+  "LogOut": "تسجيل الخروج",
+  "Export_as": "تصدير كـ",
+  "Incoming_calls": "المكالمات الواردة",
+  "Answered_calls": "المكالمات المجابة",
+  "Abandoned_calls": "المكالمات المتروكة",
+  "Total_call_duration": "إجمالي مدة المكالمات",
+"Call_Propensity": "احتمالية المكالمات"
+}

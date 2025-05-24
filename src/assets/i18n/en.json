@@ -1,0 +1,15 @@
+{
+    "Manage":"Manage",
+    "Dashboard":"Dashboard",
+    "Calendar":"Calendar",
+    "History":"History",
+    "Users":"Users",
+    "Settings":"Settings",
+    "LogOut":"Log Out",
+    "Export_as":"Export as",
+    "Incoming_calls":"Incoming calls",
+    "Answered_calls":"Answered calls",
+    "Abandoned_calls":"Abandoned calls",
+    "Total_call_duration":"Total call duration",
+     "Call_Propensity": "Call Propensity"
+}

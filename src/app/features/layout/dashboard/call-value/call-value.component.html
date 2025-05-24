@@ -2,9 +2,20 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-lg-6">
-        <h2 class="title pt-3">Dashboard</h2>
+        <h2 class="title text-primary-color pt-5 py-3">{{'Dashboard'|translate}}</h2>
       </div>
-      <div class="col-12 col-lg-6"></div>
+      <div class="col-12 col-lg-6">
+          <div class="d-flex justify-content-end filter pt-5 py-3">
+            <div class="mx-3">
+              <img src="../../../../../assets/images/icons/export.svg" alt="" srcset="">
+              <span class="text-primary-color px-2">{{'Export_as'|translate}}</span><i class="bi bi-chevron-down "></i>
+            </div>
+             <div class="">
+              <img src="../../../../../assets/images/icons/date.svg" alt="" srcset="">
+              <span  class="text-primary-color px-2">12 July, 2024</span><i class="bi bi-chevron-down"></i>
+            </div>
+          </div>
+      </div>
       <div class="col-12 col-lg-3">
         <div class="cards mt-3 ">
           <img
@@ -13,8 +24,8 @@
             srcset=""
           />
           <div class="info">
-            <p  class="mb-0">Incoming calls</p>
-            <strong class="incoming">221</strong>
+            <p  class="mb-0 text-gray-color">{{'Incoming_calls'|translate}}</p>
+            <strong class="text-drak-color">221</strong>
           </div>
         </div>
       </div>
@@ -26,8 +37,8 @@
             srcset=""
           />
           <div class="info ">
-            <p  class="mb-0">Answered calls</p>
-            <strong class="answered">160</strong>
+            <p  class="mb-0 text-gray-color">{{'Answered_calls'|translate}}</p>
+            <strong class="answered text-primaryGreen-color">160</strong>
           </div>
         </div>
       </div>
@@ -39,8 +50,8 @@
             srcset=""
           />
           <div class="info ">
-            <p  class="mb-0">Abandoned calls</p>
-            <strong class="abandoned">70</strong>
+            <p  class="mb-0 text-gray-color">{{'Abandoned_calls'|translate}}</p>
+            <strong class="text-red-color">70</strong>
           </div>
         </div>
       </div>
@@ -52,8 +63,8 @@
             srcset=""
           />
           <div class="info ">
-            <p  class="mb-0">Total call duration</p>
-            <strong class="duration">02:50 M</strong>
+            <p  class="mb-0 text-gray-color">{{'Total_call_duration'|translate}}</p>
+            <strong class="text-drak-color">02:50 M</strong>
           </div>
         </div>
       </div>
