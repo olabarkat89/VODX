@@ -25,7 +25,7 @@ export class PropensityCallComponent {
   public chartOptions: any;
 
 constructor(public translate: TranslateService) {
- 
+ console.log(translate.currentLang)
     this.chartOptions = {
       series: [
         {
@@ -111,17 +111,7 @@ constructor(public translate: TranslateService) {
           formatter: (val: number) => `${val} Calls`,
         },
       },
-      title: {
-         text: this.translate.instant('Call_Propensity'),
-        align: 'left',
-        style: {
-          fontSize: '16px',
-          color: '#282E39',
-          fontWeight: 600,
-          paddingBottom: '16px',
-          fontFamily: 'Poppins, sans-serif',
-        },
-      },
+     
       legend: {
         show: false,
       },

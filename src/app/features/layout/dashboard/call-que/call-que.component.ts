@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import ApexCharts from 'apexcharts';
 import {
   ApexNonAxisChartSeries,
@@ -25,7 +26,7 @@ export type ChartOptions = {
 @Component({
   selector: 'app-call-que',
   standalone: true,
-  imports: [CommonModule,NgApexchartsModule],
+  imports: [CommonModule,NgApexchartsModule,TranslateModule],
   templateUrl: './call-que.component.html',
   styleUrl: './call-que.component.scss'
 })

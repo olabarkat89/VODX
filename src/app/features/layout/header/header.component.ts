@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -21,6 +21,7 @@ export class HeaderComponent {
     this.currentLang = this.currentLang === 'en' ? 'ar' : 'en';
     this.translate.use(this.currentLang);
  localStorage.setItem('lang', this.currentLang);
+   document.documentElement.lang = this.currentLang;
   document.documentElement.dir = this.currentLang === 'ar' ? 'rtl' : 'ltr';
 }
 

@@ -11,5 +11,20 @@
     "Answered_calls":"Answered calls",
     "Abandoned_calls":"Abandoned calls",
     "Total_call_duration":"Total call duration",
-     "Call_Propensity": "Call Propensity"
+     "Call_Propensity": "Call Propensity",
+     "Satisfaction_score":"Satisfaction score",
+     "Call_Que":"Call Que",
+     "normal":"normal",
+     "SLA_Limits":"SLA Limits",
+     "call_desc":"Calls answered in less than",
+     "Emergency_call":"Emergency call",
+     "Incoming":"Incoming",
+     "More":"More",
+     "Today’s call history":"Today’s call history",
+     "Customer":"Customer",
+     "Date":"Date",
+     "Duration":"Duration",
+     "Action":"Action",
+     "Call_geography":"Call geography",
+     "Search":"Search..."
 }

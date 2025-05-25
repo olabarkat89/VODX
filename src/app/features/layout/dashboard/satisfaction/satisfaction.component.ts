@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { ChartComponent, NgApexchartsModule } from 'ng-apexcharts';
 
 @Component({
   selector: 'app-satisfaction',
   standalone: true,
-  imports: [CommonModule,NgApexchartsModule],
+  imports: [CommonModule,NgApexchartsModule,TranslateModule],
   templateUrl: './satisfaction.component.html',
   styleUrl: './satisfaction.component.scss'
 })

@@ -10,6 +10,23 @@
   "Incoming_calls": "المكالمات الواردة",
   "Answered_calls": "المكالمات المجابة",
   "Abandoned_calls": "المكالمات المتروكة",
-  "Total_call_duration": "إجمالي مدة المكالمات",
-"Call_Propensity": "احتمالية المكالمات"
+  "Total_call_duration": "إجمالي مدة المكالمة",
+  "Call_Propensity": "احتمالية الاتصال",
+  "Satisfaction_score": "معدل الرضا",
+  "Call_Que": "قائمة انتظار المكالمات",
+  "normal": "عادي",
+  "SLA_Limits": "حدود اتفاقية مستوى الخدمة (SLA)",
+  "call_desc": "المكالمات المُجابة في أقل من",
+  "Emergency_call": "مكالمة طارئة",
+   "Incoming": "الواردة",
+  "More": "المزيد",
+  "Today’s call history": "سجل مكالمات اليوم",
+  "Customer": "العميل",
+  "Date": "التاريخ",
+  "Duration": "المدة",
+  "Action": "الإجراء",
+  "Call_geography": "جغرافية المكالمات",
+  "Search":"ابحث..."
+
+
 }

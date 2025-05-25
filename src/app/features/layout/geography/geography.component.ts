@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import L from 'leaflet';
 
 @Component({
   selector: 'app-geography',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,TranslateModule],
   templateUrl: './geography.component.html',
   styleUrl: './geography.component.scss'
 })
