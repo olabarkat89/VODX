@@ -6,7 +6,9 @@
   text-transform: capitalize;
   color: #141736;
 }
-
+.table-responsive {
+  height: 380px;
+    overflow-x: auto;
 .table {
   border-collapse: separate;
   border-spacing: 0 12px;
@@ -45,6 +47,7 @@
           img {
             width: 40px;
             height: 40px;
+            object-fit: cover;
             border-radius: 50%;
           }
           .user-info {
@@ -70,6 +73,7 @@
       }
     }
   }
+}
 }
 @media (max-width:768px){
     .table   tbody th ,td {

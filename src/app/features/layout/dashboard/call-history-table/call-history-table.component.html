@@ -1,72 +1,34 @@
 <div class="cardStyle my-3">
   <h5 class="title my-3">{{'Today’s call history'|translate}}</h5>
   <div class="table-responsive">
-  <table class="table align-middle">
+    <table class="table align-middle">
 
-    <thead>
-      <tr>
-        <th scope="col">{{'Customer'|translate}}</th>
-        <th scope="col">{{'Date'|translate}}</th>
-        <th scope="col">{{'Duration'|translate}}</th>
-        <th scope="col">{{'Action'|translate}}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <div class="user-dropdown d-flex">
-            <img
-              src="../../../../assets/images/icons/user.png"
-              alt=""
-              srcset=""
-            />
-            <div class="user-info">
-              <div class="user-name text-drak-color">Mohamed atef</div>
-              <div class="user-status text-gray-color">Available</div>
+      <thead>
+        <tr>
+          <th scope="col">{{'Customer'|translate}}</th>
+          <th scope="col">{{'Date'|translate}}</th>
+          <th scope="col">{{'Duration'|translate}}</th>
+          <th scope="col">{{'Action'|translate}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of calls; let i = index">
+          <td>
+            <div class="user-dropdown d-flex">
+              <img src="../../../../assets/images/icons/user.png" alt="user-icon" />
+              <div class="user-info">
+                <div class="user-name text-drak-color">{{ data?.name }}</div>
+                <div class="user-status text-gray-color">{{ data?.status }}</div>
+              </div>
             </div>
-          </div>
-        </td>
-        <td>19 Oct 2023 08:43</td>
-        <td>00:30</td>
-        <td><i class="bi bi-three-dots-vertical"></i></td>
-      </tr>
-      <tr>
-        <td>
-          <div class="user-dropdown d-flex">
-            <img
-              src="../../../../assets/images/icons/user.png"
-              alt=""
-              srcset=""
-            />
-            <div class="user-info">
-              <div class="user-name text-drak-color">Mohamed atef</div>
-              <div class="user-status text-gray-color">Available</div>
-            </div>
-          </div>
-        </td>
-        <td>19 Oct 2023 08:43</td>
-        <td>00:30</td>
-        <td><i class="bi bi-three-dots-vertical"></i></td>
-      </tr>
-      <tr>
-        <td>
-          <div class="user-dropdown d-flex">
-            <img
-              src="../../../../assets/images/icons/user.png"
-              alt=""
-              srcset=""
-            />
-            <div class="user-info">
-              <div class="user-name text-drak-color">Mohamed atef</div>
-              <div class="user-status text-gray-color">Available</div>
-            </div>
-          </div>
-        </td>
-        <td>19 Oct 2023 08:43</td>
-        <td>00:30</td>
-        <td><i class="bi bi-three-dots-vertical"></i></td>
-      </tr>
-    </tbody>
-  </table>
+          </td>
+          <td>{{ data?.date }}</td>
+          <td>{{ data?.duration }}</td>
+          <td><i class="bi bi-three-dots-vertical"></i></td>
+        </tr>
+
+        
+      </tbody>
+    </table>
   </div>
 </div>

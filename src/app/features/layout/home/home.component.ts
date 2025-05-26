@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { SidbarComponent } from '../sidbar/sidbar.component';
-import { HeaderComponent } from '../header/header.component';
+import { SidbarComponent } from '../shared/sidbar/sidbar.component';
+import { HeaderComponent } from '../shared/header/header.component';
 import { RouterModule } from '@angular/router';
 
 @Component({

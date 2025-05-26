@@ -5,69 +5,44 @@
         <h2 class="title text-primary-color pt-5 py-3">{{'Dashboard'|translate}}</h2>
       </div>
       <div class="col-12 col-lg-6">
-          <div class="d-flex justify-content-end filter pt-5 py-3">
-            <div class="mx-3">
-              <img src="../../../../../assets/images/icons/export.svg" alt="" srcset="">
-              <span class="text-primary-color px-2">{{'Export_as'|translate}}</span><i class="bi bi-chevron-down "></i>
-            </div>
-             <div class="">
-              <img src="../../../../../assets/images/icons/date.svg" alt="" srcset="">
-              <span  class="text-primary-color px-2">12 July, 2024</span><i class="bi bi-chevron-down"></i>
-            </div>
+        <div class="d-flex justify-content-end filter pt-5 py-3">
+          <div class="mx-3">
+            <img src="../../../../../assets/images/icons/export.svg" alt="" srcset="">
+            <span class="text-primary-color px-2">{{'Export_as'|translate}}</span><i class="bi bi-chevron-down "></i>
           </div>
-      </div>
-      <div class="col-12 col-lg-3">
-        <div class="cards mt-3 ">
-          <img
-            src="../../../../../assets/images/icons/incomingCall.svg"
-            alt=""
-            srcset=""
-          />
-          <div class="info">
-            <p  class="mb-0 text-gray-color">{{'Incoming_calls'|translate}}</p>
-            <strong class="text-drak-color">221</strong>
+          <div class="">
+            <img src="../../../../../assets/images/icons/date.svg" alt="" srcset="">
+            <span class="text-primary-color px-2">12 July, 2024</span><i class="bi bi-chevron-down"></i>
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-3">
-        <div class="cards mt-3 ">
-          <img
+      <ng-container *ngFor="let data of callValue">
+        <div class="col-12 col-lg-3">
+          <div class="cards mt-3 ">
+            <img *ngIf="data.type == 'Incoming_calls'" src="../../../../../assets/images/icons/incomingCall.svg" alt="" srcset="" />
+             <img *ngIf="data.type == 'Answered_calls'"
             src="../../../../../assets/images/icons/answerCall.svg"
             alt=""
             srcset=""
           />
-          <div class="info ">
-            <p  class="mb-0 text-gray-color">{{'Answered_calls'|translate}}</p>
-            <strong class="answered text-primaryGreen-color">160</strong>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-3">
-        <div class="cards mt-3">
-          <img
+             <img *ngIf="data.type == 'Abandoned_calls'"
             src="../../../../../assets/images/icons/abandonCall.svg"
             alt=""
             srcset=""
           />
-          <div class="info ">
-            <p  class="mb-0 text-gray-color">{{'Abandoned_calls'|translate}}</p>
-            <strong class="text-red-color">70</strong>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-3">
-        <div class="cards mt-3  ">
-          <img
+          <img *ngIf="data.type == 'Total_call_duration'"
             src="../../../../../assets/images/icons/totalCall.svg"
             alt=""
             srcset=""
           />
-          <div class="info ">
-            <p  class="mb-0 text-gray-color">{{'Total_call_duration'|translate}}</p>
-            <strong class="text-drak-color">02:50 M</strong>
+            <div class="info">
+              <p class="mb-0 text-gray-color">{{data.type|translate}}</p>
+              <strong class="text-drak-color">{{data.value}}</strong>
+            </div>
           </div>
         </div>
-      </div>
+      </ng-container>
+
     </div>
   </div>
 </div>

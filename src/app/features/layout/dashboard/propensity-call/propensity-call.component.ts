@@ -25,7 +25,6 @@ export class PropensityCallComponent {
   public chartOptions: any;
 
 constructor(public translate: TranslateService) {
- console.log(translate.currentLang)
     this.chartOptions = {
       series: [
         {

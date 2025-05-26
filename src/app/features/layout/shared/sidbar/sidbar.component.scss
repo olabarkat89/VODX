@@ -4,9 +4,9 @@
   flex-direction: column;
   height: 100%;
   .content {
-    flex: 1; /* يأخذ كل المساحة المتبقية */
+    flex: 1; 
     width: 100%;
-
+ padding: 0 1rem;
     img {
       width: 65%;
       margin-top: 0.7rem;
@@ -24,8 +24,9 @@
       padding-inline-start:0;
       li {
         color: #808ea7;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         cursor: pointer;
+        padding: 0.5rem;
         svg {
           margin-inline-end: 0.4rem;
           stroke: #808ea7;
@@ -34,7 +35,7 @@
     }
     .activeLINK {
       background: #6e62e5;
-      padding: 0.5rem;
+      
       border-radius: 12px;
       color: #fff !important;
       svg {

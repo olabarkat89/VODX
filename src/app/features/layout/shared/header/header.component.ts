@@ -13,7 +13,6 @@ export class HeaderComponent {
 
   constructor(private translate: TranslateService) {
     this.currentLang =  localStorage.getItem('lang') || 'en';
-    console.log("this.currentLang",this.currentLang)
     this.translate.use(this.currentLang);
   }
 

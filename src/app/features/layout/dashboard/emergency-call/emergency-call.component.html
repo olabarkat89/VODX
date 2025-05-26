@@ -1,5 +1,5 @@
 <div class="emergency mt-3">
-  <h5 class="title">{{'Emergency_call'|translate}}</h5>
+  <h5 class="title my-3">{{'Emergency_call'|translate}}</h5>
   <div class="red cardCall d-flex justify-content-between">
     <div class="user-dropdown d-flex align-items-center">
       <img
@@ -23,6 +23,8 @@
     </div>
   </div>
   <h5 class="title mt-4">{{'Incoming'|translate}}</h5>
+  <div class="containerList">
+  <ng-container *ngFor="let data of displayedCalls; let i = index">
   <div class="gray cardCall d-flex justify-content-between mt-3">
     <div class="user-dropdown d-flex align-items-center">
       <img
@@ -31,12 +33,12 @@
         srcset=""
       />
       <div class="user-info">
-        <div class="user-name">Ahmed atef</div>
-        <div class="user-status text-gray-color">Service inquiry</div>
+        <div class="user-name">{{data?.name}}</div>
+        <div class="user-status text-gray-color">{{data?.status}}</div>
       </div>
     </div>
     <div class="d-flex align-items-center">
-      <p class="mb-0">00:30</p>
+      <p class="mb-0">{{ data?.duration }}</p>
       <img
         class="phone"
         src="../../../../assets/images/icons/call.svg"
@@ -45,95 +47,13 @@
       />
     </div>
   </div>
-   <div class="gray cardCall d-flex justify-content-between mt-3">
-    <div class="user-dropdown d-flex align-items-center">
-      <img
-        src="../../../../assets/images/icons/user.png"
-        alt="userIcon"
-        srcset=""
-      />
-      <div class="user-info">
-        <div class="user-name">Ahmed atef</div>
-        <div class="user-status text-gray-color">Service inquiry</div>
-      </div>
-    </div>
-    <div class="d-flex align-items-center">
-      <p class="mb-0">00:30</p>
-      <img
-        class="phone"
-        src="../../../../assets/images/icons/call.svg"
-        alt="call"
-        srcset=""
-      />
-    </div>
+ 
+  </ng-container>
   </div>
-   <div class="gray cardCall d-flex justify-content-between mt-3">
-    <div class="user-dropdown d-flex align-items-center">
-      <img
-        src="../../../../assets/images/icons/user.png"
-        alt="userIcon"
-        srcset=""
-      />
-      <div class="user-info">
-        <div class="user-name">Ahmed atef</div>
-        <div class="user-status text-gray-color">Service inquiry</div>
-      </div>
-    </div>
-    <div class="d-flex align-items-center">
-      <p class="mb-0">00:30</p>
-      <img
-        class="phone"
-        src="../../../../assets/images/icons/call.svg"
-        alt="call"
-        srcset=""
-      />
-    </div>
-  </div>
-  <div class="gray cardCall d-flex justify-content-between mt-3">
-    <div class="user-dropdown d-flex align-items-center">
-      <img
-        src="../../../../assets/images/icons/user.png"
-        alt="userIcon"
-        srcset=""
-      />
-      <div class="user-info">
-        <div class="user-name">Ahmed atef</div>
-        <div class="user-status text-gray-color">Service inquiry</div>
-      </div>
-    </div>
-    <div class="d-flex align-items-center">
-      <p class="mb-0">00:30</p>
-      <img
-        class="phone"
-        src="../../../../assets/images/icons/call.svg"
-        alt="call"
-        srcset=""
-      />
-    </div>
-  </div>
-   <div class="gray cardCall d-flex justify-content-between mt-3">
-    <div class="user-dropdown d-flex align-items-center">
-      <img
-        src="../../../../assets/images/icons/user.png"
-        alt="userIcon"
-        srcset=""
-      />
-      <div class="user-info">
-        <div class="user-name">Ahmed atef</div>
-        <div class="user-status text-gray-color">Service inquiry</div>
-      </div>
-    </div>
-    <div class="d-flex align-items-center">
-      <p class="mb-0">00:30</p>
-      <img
-        class="phone"
-        src="../../../../assets/images/icons/call.svg"
-        alt="call"
-        srcset=""
-      />
-    </div>
-  </div>
-  
-    <h5 class="title text-center mt-3 mb-0">20 {{'More'|translate}}</h5>
-
+  @if( calls.length - displayedCalls.length >0)
+{    <h5 class="title text-center mt-3 mb-0" (click)="showAll = true">{{calls.length - displayedCalls.length}} {{'More'|translate}}</h5>
+}
+  @if( calls.length - displayedCalls.length == 0)
+{    <h5 class="title text-center mt-3 mb-0" (click)="showAll = false">{{'less'|translate}}</h5>
+}
 </div>

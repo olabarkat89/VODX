@@ -5,6 +5,10 @@
     .gray{
         background: #F8F8F9;
     }
+    .containerList{
+      height: 500px;
+      overflow-x: auto;
+    }
   .cardCall {
     padding: 1rem;
     border-radius: 12px;
@@ -13,6 +17,7 @@
     img {
       width: 30px;
       height: 30px;
+      object-fit: cover;
       border-radius: 50%;
     }
     .user-info {
@@ -20,6 +25,11 @@
         color: #16181D;
         margin-inline-start: 0.5rem;
         font-size: 14px;
+            white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+    display: inline-block;
       }
       .user-status {
         margin-inline-start: 0.5rem;
