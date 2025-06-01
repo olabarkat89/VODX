@@ -17,3 +17,14 @@ export interface calltypeInterface{
     type:string,
     value:string,
 }
+export interface EmotionData {
+  time: number;           
+  timestamp: string;      
+  angry: number;         
+  disgust: number;       
+  fear: number;          
+  happy: number;          
+  neutral: number;     
+  sad: number;            
+  surprise: number;       
+}

@@ -1,0 +1,28 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="cardStyle mt-3">
+                <h5 class="title py-3">Emotion Data Over Time</h5>
+                <canvas #myChart width="600" height="400"></canvas>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="cardStyle mt-3">
+                <h5 class="title py-3">Call Emotion Trends Over Time</h5>
+
+                <apx-chart [series]="donutSeries" [chart]="donutChart.chart" [labels]="donutChart.labels"
+                    [colors]="donutChart.colors" [legend]="donutChart.legend" [plotOptions]="donutChart.plotOptions"
+                    [dataLabels]="donutChart.dataLabels">
+                </apx-chart>
+            </div>
+        </div>
+        <div class="col-12 mt-3">
+
+            <video #videoPlayer width="100%"  height="250" controls>
+                <source src="../../../../assets/images/video/vidocar.mp4" type="video/mp4" />
+
+            </video>
+
+        </div>
+    </div>
+</div>
