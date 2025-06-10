@@ -14,12 +14,13 @@ import {
   CategoryScale,
   Tooltip,
 } from 'chart.js';
+import { ChartComponent } from './chart/chart.component';
 
 Chart.register(...registerables);
 @Component({
   selector: 'app-emoji',
   standalone: true,
-  imports: [CommonModule, NgApexchartsModule, NgApexchartsModule],
+  imports: [CommonModule, NgApexchartsModule, ChartComponent],
   templateUrl: './emoji.component.html',
   styleUrl: './emoji.component.scss'
 })
@@ -37,6 +38,7 @@ export class EmojiComponent {
   }
   getData() {
     this.myApi.getAllEmoji().subscribe((res: any) => {
+      console.log("res",res)
       this.emotionData = res
       this.creatChart()
       this.createCircule()
