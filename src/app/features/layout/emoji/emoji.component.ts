@@ -38,7 +38,6 @@ export class EmojiComponent {
   }
   getData() {
     this.myApi.getAllEmoji().subscribe((res: any) => {
-      console.log("res",res)
       this.emotionData = res
       this.creatChart()
       this.createCircule()
