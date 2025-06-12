@@ -1,0 +1,109 @@
+
+<div class="profile-container mt-3">
+    <div class="tabs">
+        <div class="tab" *ngFor="let tab of tabs" [class.active]="activeTab === tab" (click)="selectTab(tab)">
+            {{ tab }}
+        </div>
+    </div>
+<div class="container-fluid">
+   
+         <ng-container [ngSwitch]="activeTab">
+            <div *ngSwitchCase="'Profile'">
+                 <div class="row">
+                  <div class="col-12 col-lg-4 mt-3">
+                        <div class="profile-section ">
+                        <div class="profile-item d-flex">
+                            <i class="bi bi-person"></i>
+
+                            <div class="">
+                                <p class="label mb-0">Personal name</p>
+                                <p class="value mb-0">Nardine</p>
+
+                            </div>
+
+                        </div>
+                        <div class="profile-item d-flex">
+                            <i class="bi bi-credit-card-2-front"></i>
+                            <div class="">
+                            <p class="label mb-0">National ID</p>
+                            <p class="value mb-0">183746380822334</p>
+                            </div>
+                        </div>
+                        <div class="profile-item d-flex">
+                            <i class="bi bi-envelope"></i>
+                            <div class="">
+                            <p class="label mb-0">Email</p>
+                            <p class="value">Nardinegmail.com</p></div>
+                        </div>
+                        <div class="profile-item d-flex">
+                            <i class="bi bi-telephone"></i>
+                            <div class="">
+                            <p class="label mb-0">Mobile number</p>
+                            <p class="value">00966 5598733</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                      <div class="col-12 col-lg-4 mt-3">
+                        <div class="profile-section ">
+                             <div class="profile-item d-flex">
+                            <i class="bi bi-geo-alt"></i>
+                            <div class="">
+                            <p class="label mb-0">Emirate</p>
+                            <p class="value mb-0">Abu Dhabi</p></div>
+                        </div>
+                        <div class="profile-item d-flex">
+                            <i class="bi bi-building"></i>
+                            <div class="">
+                            <p class="label mb-0">City</p>
+                            <p class="value mb-0">Al Ain</p></div>
+                        </div>
+                        <div class="profile-item d-flex">
+                            <i class="bi bi-map"></i>
+                            <div class="">
+                            <p class="label mb-0">Area</p>
+                            <p class="value mb-0">Al Jimi</p></div>
+                        </div>
+                        <div class="profile-item d-flex">
+                            <i class="bi bi-house-door"></i>
+                           <div class="">
+                            <p class="label mb-0">Residency</p>
+                            <p class="value mb-0">Resident</p></div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mt-3">
+                        <div class="profile-section">
+                             <div class="profile-item d-flex">
+                            <i class="bi bi-gender-female"></i>
+                            <div class="">
+                            <p class="label mb-0">Gender</p>
+                            <p class="value mb-0">Female</p></div>
+                        </div>
+                        <div class="profile-item d-flex">
+                            <i class="bi bi-calendar"></i>
+                            <div class="">
+                            <p class="label mb-0">Date of birth</p>
+                            <p class="value mb-0">09/11/1997</p></div>
+                        </div>
+                        <div class="profile-item d-flex">
+                            <i class="bi bi-flag"></i>
+                           <div class="">
+                            <p class="label mb-0">Nationality</p>
+                            <p class="value mb-0">Algerian</p></div>
+                        </div>
+                        <div class="profile-item d-flex">
+                            <i class="bi bi-star-fill"></i>
+                            <div class="">
+                            <p class="label mb-0">Satisfaction</p>
+                            <p class="value mb-0">5.0</p></div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+            </div>
+         </ng-container>
+
+</div>
+</div>

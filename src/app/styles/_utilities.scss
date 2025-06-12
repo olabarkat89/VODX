@@ -35,3 +35,12 @@
 }.text-grayWhite-color {
   color: variables.$text-grayWhite-color;
 }
+.text-prpuler-color {
+  color: variables.$text-prpuler-color;
+}
+.prpulerBg{
+  background-color: variables.$text-prpuler-color;
+}
+.prpulerWhiteBg{
+  background: variables.$text-prpulerWhite-color !important;
+}
