@@ -1,108 +1,116 @@
-
 <div class="profile-container mt-3">
     <div class="tabs">
         <div class="tab" *ngFor="let tab of tabs" [class.active]="activeTab === tab" (click)="selectTab(tab)">
-            {{ tab }}
+            {{ tab |translate}}
         </div>
     </div>
-<div class="container-fluid">
-   
-         <ng-container [ngSwitch]="activeTab">
+    <div class="container-fluid">
+
+        <ng-container [ngSwitch]="activeTab">
             <div *ngSwitchCase="'Profile'">
-                 <div class="row">
-                  <div class="col-12 col-lg-4 mt-3">
+                <div class="row">
+                    <div class="col-12 col-lg-4 mt-3">
                         <div class="profile-section ">
-                        <div class="profile-item d-flex">
-<img src="../../../../../assets/images/icons/user-square.svg" alt="" srcset="">
-                            <div class="">
-                                <p class="label mb-0">Personal name</p>
-                                <p class="value mb-0">Nardine</p>
+                            <div class="profile-item d-flex">
+                                <img src="../../../../../assets/images/icons/user-square.svg" alt="" srcset="">
+                                <div class="">
+                                    <p class="label mb-0">{{'Personal_name'|translate}}</p>
+                                    <p class="value mb-0">Nardine</p>
+
+                                </div>
 
                             </div>
-
-                        </div>
-                        <div class="profile-item d-flex">
-<img src="../../../../../assets/images/icons/user-tag.svg" alt="" srcset="">
-                            <div class="">
-                            <p class="label mb-0">National ID</p>
-                            <p class="value mb-0">183746380822334</p>
+                            <div class="profile-item d-flex">
+                                <img src="../../../../../assets/images/icons/user-tag.svg" alt="" srcset="">
+                                <div class="">
+                                    <p class="label mb-0">{{'National_ID'|translate}}</p>
+                                    <p class="value mb-0">183746380822334</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="profile-item d-flex">
-<img src="../../../../../assets/images/icons/sms.svg" alt="" srcset="">
-                            <div class="">
-                            <p class="label mb-0">Email</p>
-                            <p class="value mb-0">Nardinegmail.com</p></div>
-                        </div>
-                        <div class="profile-item d-flex">
-<img src="../../../../../assets/images/icons/callIcon.svg" alt="" srcset="">
-                            <div class="">
-                            <p class="label mb-0">Mobile number</p>
-                            <p class="value mb-0">00966 5598733</p>
+                            <div class="profile-item d-flex">
+                                <img src="../../../../../assets/images/icons/sms.svg" alt="" srcset="">
+                                <div class="">
+                                    <p class="label mb-0">{{'Email'|translate}}</p>
+                                    <p class="value mb-0">Nardinegmail.com</p>
+                                </div>
                             </div>
-                        </div>
+                            <div class="profile-item d-flex">
+                                <img src="../../../../../assets/images/icons/callIcon.svg" alt="" srcset="">
+                                <div class="">
+                                    <p class="label mb-0">{{'Mobile_number'|translate}}</p>
+                                    <p class="value mb-0">00966 5598733</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                      <div class="col-12 col-lg-4 mt-3">
+                    <div class="col-12 col-lg-4 mt-3">
                         <div class="profile-section ">
-                             <div class="profile-item d-flex">
-<img src="../../../../../assets/images/icons/map.svg" alt="" srcset="">
-                            <div class="">
-                            <p class="label mb-0">Emirate</p>
-                            <p class="value mb-0">Abu Dhabi</p></div>
-                        </div>
-                        <div class="profile-item d-flex">
-<img src="../../../../../assets/images/icons/gps.svg" alt="" srcset="">
-                            <div class="">
-                            <p class="label mb-0">City</p>
-                            <p class="value mb-0">Al Ain</p></div>
-                        </div>
-                        <div class="profile-item d-flex">
-<img src="../../../../../assets/images/icons/location.svg" alt="" srcset="">
-                            <div class="">
-                            <p class="label mb-0">Area</p>
-                            <p class="value mb-0">Al Jimi</p></div>
-                        </div>
-                        <div class="profile-item d-flex">
-<img src="../../../../../assets/images/icons/global.svg" alt="" srcset="">
-                           <div class="">
-                            <p class="label mb-0">Residency</p>
-                            <p class="value mb-0">Resident</p></div>
-                        </div>
+                            <div class="profile-item d-flex">
+                                <img src="../../../../../assets/images/icons/map.svg" alt="" srcset="">
+                                <div class="">
+                                    <p class="label mb-0">{{'Emirate'|translate}}</p>
+                                    <p class="value mb-0">Abu Dhabi</p>
+                                </div>
+                            </div>
+                            <div class="profile-item d-flex">
+                                <img src="../../../../../assets/images/icons/gps.svg" alt="" srcset="">
+                                <div class="">
+                                    <p class="label mb-0">{{'City'|translate}}</p>
+                                    <p class="value mb-0">Al Ain</p>
+                                </div>
+                            </div>
+                            <div class="profile-item d-flex">
+                                <img src="../../../../../assets/images/icons/location.svg" alt="" srcset="">
+                                <div class="">
+                                    <p class="label mb-0">{{'Area'|translate}}</p>
+                                    <p class="value mb-0">Al Jimi</p>
+                                </div>
+                            </div>
+                            <div class="profile-item d-flex">
+                                <img src="../../../../../assets/images/icons/global.svg" alt="" srcset="">
+                                <div class="">
+                                    <p class="label mb-0">{{'Residency'|translate}}</p>
+                                    <p class="value mb-0">Resident</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4 mt-3">
                         <div class="profile-section">
-                             <div class="profile-item d-flex">
-<img src="../../../../../assets/images/icons/user.svg" alt="" srcset="">
-                            <div class="">
-                            <p class="label mb-0">Gender</p>
-                            <p class="value mb-0">Female</p></div>
-                        </div>
-                        <div class="profile-item d-flex">
-<img src="../../../../../assets/images/icons/calendar.svg" alt="" srcset="">
-                            <div class="">
-                            <p class="label mb-0">Date of birth</p>
-                            <p class="value mb-0">09/11/1997</p></div>
-                        </div>
-                        <div class="profile-item d-flex">
-<img src="../../../../../assets/images/icons/National.svg" alt="" srcset="">
-                           <div class="">
-                            <p class="label mb-0">Nationality</p>
-                            <p class="value mb-0">Algerian</p></div>
-                        </div>
-                        <div class="profile-item d-flex">
-<img src="../../../../../assets/images/icons/star.svg" alt="" srcset="">
-                            <div class="">
-                            <p class="label mb-0">Satisfaction</p>
-                            <p class="value mb-0">5.0</p></div>
-                        </div>
+                            <div class="profile-item d-flex">
+                                <img src="../../../../../assets/images/icons/user.svg" alt="" srcset="">
+                                <div class="">
+                                    <p class="label mb-0">{{'Gender'|translate}}</p>
+                                    <p class="value mb-0">Female</p>
+                                </div>
+                            </div>
+                            <div class="profile-item d-flex">
+                                <img src="../../../../../assets/images/icons/calendar.svg" alt="" srcset="">
+                                <div class="">
+                                    <p class="label mb-0">{{'Date_of_birth'|translate}}</p>
+                                    <p class="value mb-0">09/11/1997</p>
+                                </div>
+                            </div>
+                            <div class="profile-item d-flex">
+                                <img src="../../../../../assets/images/icons/National.svg" alt="" srcset="">
+                                <div class="">
+                                    <p class="label mb-0">{{'Nationality'|translate}}</p>
+                                    <p class="value mb-0">Algerian</p>
+                                </div>
+                            </div>
+                            <div class="profile-item d-flex">
+                                <img src="../../../../../assets/images/icons/star.svg" alt="" srcset="">
+                                <div class="">
+                                    <p class="label mb-0">{{'Satisfaction'|translate}}</p>
+                                    <p class="value mb-0">5.0</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                    
-            </div>
-         </ng-container>
+                </div>
 
-</div>
+            </div>
+        </ng-container>
+
+    </div>
 </div>

@@ -1,0 +1,90 @@
+<div class="profile-container mt-3">
+    <div class="tabs">
+        <div class="tab" *ngFor="let tab of tabs" [class.active]="activeTab === tab" (click)="selectTab(tab)">
+            {{ tab |translate }}
+        </div>
+    </div>
+    <div class="container-fluid">
+
+        <ng-container [ngSwitch]="activeTab">
+            <div *ngSwitchCase="'Chats'">
+                <div class="chat-container">
+                    <div class="chat-date">Monday, 12-05-2025</div>
+
+                    <div class="message-row" *ngFor="let msg of messages"
+                        [ngClass]="{ left: !msg.isMe, right: msg.isMe }">
+                        <img [src]="msg.avatar" alt="Avatar" class="avatar" />
+                        <div class="message-bubble">
+                            <div class="sender-name" [ngClass]="{ 'text-end': msg.isMe }">
+                                {{ msg.sender }}
+                            </div>
+                            <div class="data" [ngClass]="{ 'blueBg': !msg.isMe , 'grayBg': msg.isMe }">
+                                <div class="message-text">{{ msg.content }}</div>
+                                <div class="timestamp text-end">
+                                    Sent on {{ msg.timestamp }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div *ngSwitchCase="'Documents'">
+                <div class="documents-container">
+                                            <h3>{{'Documents'|translate}}</h3>
+
+                    <div class="documents-header">
+                        <div class="search-bar">
+                            <i class="bi bi-search"></i>
+                            <input type="text" [placeholder]="'Search for documents' |translate" />
+                        </div>
+                        <button class="filter-btn">
+                            <i class="bi bi-funnel"></i> {{'Filters'|translate}}
+                        </button>
+                    </div>
+
+                    <div class="table-header">
+                        <span>{{'Document_name'|translate}}</span>
+                        <span>{{'Date'|translate}}</span>
+                        <span>{{'Action'|translate}}</span>
+                    </div>
+
+                    <div class="document-row" *ngFor="let doc of documents">
+                        <div class="document-name">
+                            <strong>{{ doc.name }}</strong>
+                            <small>{{ doc.name }}</small>
+                        </div>
+                        <div class="document-date">{{ doc.date }}</div>
+                        <div class="document-action">
+                            <button class="action-menu"><i class="bi bi-three-dots-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngSwitchCase="'Chat Notes'">
+                <div class="chat-container">
+                    <div class="chat-date">Monday, 12-05-2025</div>
+
+                    <div class="message-row" *ngFor="let msg of messages"
+                        [ngClass]="{ left: !msg.isMe, right: msg.isMe }">
+                        <img [src]="msg.avatar" alt="Avatar" class="avatar" />
+                        <div class="message-bubble">
+                            <div class="sender-name" [ngClass]="{ 'text-end': msg.isMe }">
+                                {{ msg.sender }}
+                            </div>
+                            <div class="data" [ngClass]="{ 'blueBg': !msg.isMe , 'grayBg': msg.isMe }">
+                                <div class="message-text">{{ msg.content }}</div>
+                                <div class="timestamp text-end">
+                                    Sent on {{ msg.timestamp }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </ng-container>
+    </div>
+</div>

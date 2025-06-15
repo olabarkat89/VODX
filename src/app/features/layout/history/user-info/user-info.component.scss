@@ -1,0 +1,52 @@
+ .cardStyle {
+     .bord50 {
+         width: 40px;
+         height: 40px;
+         object-fit: cover;
+         border-radius: 50%;
+     }
+
+     .info {
+         margin-inline-start: 0.5rem;
+
+         p {
+             font-size: 14px;
+         }
+
+     }
+
+     .details {
+         display: flex;
+         gap: 12px;
+
+         ul {
+             padding-inline-start: 0;
+             margin-bottom: 0;
+         }
+
+         .detail-item {
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+             font-size: 14px;
+             line-height: 30px;
+             padding-top: 0.5rem;
+
+             i {
+                 margin-right: 8px;
+                 font-size: 16px;
+                 color: #525E75;
+             }
+
+             span {
+                 flex: 1;
+                 color: #808EA7;
+             }
+
+             strong {
+                 color: #16181D;
+                 font-weight: 600;
+             }
+         }
+     }
+ }
