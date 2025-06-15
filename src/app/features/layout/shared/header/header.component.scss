@@ -4,6 +4,7 @@ header {
     position: absolute;
     padding-top: 0.6rem;
     color: #808EA7;
+    top: 20%;
 }
   
   .search-input {
@@ -12,7 +13,7 @@ header {
     border-radius: 48px;
     height: 48px;
     outline: none;
-    width: 30%;
+    width: 100%;
      color: #808EA7;
         padding-inline-start: 2.1rem;
            &::placeholder{
