@@ -7,21 +7,21 @@
                         <div class="left-side">
                             <div class="logo-lang">
                                 <img src="../../../../assets/images/Logo/vodxLogo.svg" alt="logo" class="logo"
-                                    srcset="" /> <p class="lang" (click)="switchLang()"> {{ currentLang === 'en' ? 'العربية' : 'English' }}<img
-              src="../../../../assets/images/icons/lang.svg"
-              alt=""
-              srcset=""/></p>
+                                    srcset="" />
+                                <p class="lang" (click)="switchLang()"> {{ currentLang === 'en' ? 'العربية' : 'English'
+                                    }}<img src="../../../../assets/images/icons/lang.svg" alt="" srcset="" /></p>
                             </div>
                             <h2>Welcome</h2>
 
                             <form>
                                 <label>Email</label>
-                                <input type="email" placeholder="name@mail.com" required />
+                                <input class="input" type="email" placeholder="name@mail.com" required />
 
                                 <label>Password</label>
                                 <div class="password-box position-relative">
-                                    <input type="password" placeholder="********" required />
-                                    <i class="bi bi-eye"></i>
+                                    <input class="input" [type]="!typeText ? 'password' : 'text'"
+                                        placeholder="please Enter Password" required />
+                                    <i class="bi bi-eye" (click)="changeType()"></i>
                                 </div>
 
                                 <div class="options">

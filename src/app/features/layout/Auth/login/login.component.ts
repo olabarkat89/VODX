@@ -11,7 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LoginComponent {
 currentLang = this.translate.currentLang;
-
+typeText:boolean=false
   constructor(private translate: TranslateService) {
     this.currentLang =  localStorage.getItem('lang') || 'en';
     this.translate.use(this.currentLang);
@@ -23,5 +23,8 @@ currentLang = this.translate.currentLang;
  localStorage.setItem('lang', this.currentLang);
    document.documentElement.lang = this.currentLang;
   document.documentElement.dir = this.currentLang === 'ar' ? 'rtl' : 'ltr';
+}
+changeType(){
+  this.typeText =!this.typeText
 }
 }

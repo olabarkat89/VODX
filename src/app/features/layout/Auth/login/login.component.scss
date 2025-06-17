@@ -7,9 +7,8 @@
 
 .login-box {
     width: 80%;
-    max-width: 1000px;
- 
     border-radius: 20px;
+    padding: 1.5rem;
     display: flex;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -19,20 +18,24 @@
     flex: 1;
     padding: 3rem;
     display: flex;
-       background: #fff;
-       margin-inline-end: 1rem;
+    background: #fff;
+    margin-inline-end: 1rem;
     flex-direction: column;
     justify-content: center;
-
+border-radius: 20px;
     .logo-lang {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-.lang{
+        .lang {
             font-size: 16px;
             color: #5c52bf;
             text-decoration: none;
+            img{
+                    width: 18px;
+    margin-inline-start: 0.25rem;
+            }
         }
     }
 
@@ -52,8 +55,7 @@
             font-weight: 500;
         }
 
-        input[type='email'],
-        input[type='password'] {
+        .input {
             padding: 0.75rem 1rem;
             border-radius: 8px;
             border: 1px solid #ccc;
@@ -85,8 +87,9 @@
             }
 
             a {
-                font-size: 14px;
-                color: #a03bf0;
+                font-size: 12px;
+                font-weight: 500;
+                color: #8206C0;
                 text-decoration: none;
             }
         }
@@ -118,5 +121,6 @@
     img {
         width: 100%;
         height: auto;
+        border-radius: 20px;
     }
 }
