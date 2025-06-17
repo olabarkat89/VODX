@@ -4,6 +4,7 @@ import { DashboardComponent } from './features/layout/dashboard/dashboard.compon
 import { EmojiComponent } from './features/layout/emoji/emoji.component';
 import { UserComponent } from './features/layout/user/user.component';
 import { HistoryComponent } from './features/layout/history/history.component';
+import { LoginComponent } from './features/layout/Auth/login/login.component';
 
 export const routes: Routes = [
     {
@@ -14,6 +15,10 @@ export const routes: Routes = [
             { path: 'users', component: UserComponent },
             { path: 'emoji', component: EmojiComponent },
              { path: 'history', component: HistoryComponent },
-        ]
-    }
+
+        ],
+        
+    },
+             { path: 'login', component:LoginComponent },
+
 ];

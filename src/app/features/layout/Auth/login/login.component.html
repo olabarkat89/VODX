@@ -1,0 +1,48 @@
+<div class="login mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="login-container">
+                    <div class="login-box">
+                        <div class="left-side">
+                            <div class="logo-lang">
+                                <img src="../../../../assets/images/Logo/vodxLogo.svg" alt="logo" class="logo"
+                                    srcset="" /> <p class="lang" (click)="switchLang()"> {{ currentLang === 'en' ? 'العربية' : 'English' }}<img
+              src="../../../../assets/images/icons/lang.svg"
+              alt=""
+              srcset=""/></p>
+                            </div>
+                            <h2>Welcome</h2>
+
+                            <form>
+                                <label>Email</label>
+                                <input type="email" placeholder="name@mail.com" required />
+
+                                <label>Password</label>
+                                <div class="password-box position-relative">
+                                    <input type="password" placeholder="********" required />
+                                    <i class="bi bi-eye"></i>
+                                </div>
+
+                                <div class="options">
+                                    <label class="remember-me">
+                                        <input type="checkbox" />
+                                        <span class="checkmark"></span> Remember me
+                                    </label>
+                                    <a href="#">Forget password</a>
+                                </div>
+
+                                <button type="submit" class="login-button">Log in</button>
+                            </form>
+                        </div>
+
+                        <div class="right-side">
+                            <img src="../../../../../assets/images/Logo/loginBg.png" alt="Login graphic" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
