@@ -1,0 +1,16 @@
+<div class="working-hours">
+   <h5 class="fontSize18">Working Hours</h5>
+  <div class="day" *ngFor="let day of days">
+    <div class="day-name">{{ day.name }}</div>
+    <div class="time-range">
+      <span>From</span>
+      <input type="text" value="07:00 AM" />
+<i class="bi bi-arrow-right"></i>      <span>To</span>
+      <input type="text" value="03:00 AM" />
+      <div class="icons">
+       
+<i class="bi bi-trash"></i>  
+<i class="bi bi-plus-circle"></i>    </div>
+    </div>
+  </div>
+</div>

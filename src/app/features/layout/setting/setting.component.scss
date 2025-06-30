@@ -1,0 +1,16 @@
+.setting{
+    ul{
+        li{
+            list-style: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+                width: 100%;           
+        }
+         .active{
+                border-radius: 8px;
+                background-color: #F0EFFC;
+                height: 40px;
+                width: 100%;
+            }
+    }
+}

@@ -1,0 +1,70 @@
+.working-hours {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+
+  h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .day {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+
+    .day-name {
+      width: 80px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .time-range {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      span {
+        font-size: 14px;
+        color: #666;
+      }
+
+      input {
+        width: 80px;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .arrow {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .icons {
+        display: flex;
+        gap: 5px;
+
+        button {
+          border: none;
+          background: none;
+          cursor: pointer;
+          font-size: 16px;
+
+          &.add {
+            color: green;
+          }
+
+          &.delete {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<div class="setting">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex justify-content-between mt-3">
+                    <h5 class="largeTitle">{{'Settings'|translate}}</h5>
+                    <div class="">
+                        <button class="dl-btn dl-btn--outline mx-3">Cancel</button>
+                        <button class="dl-btn dl-btn--primary ">Save</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row dl-card py-4 mt-3">
+            <div class="col-12 col-lg-2">
+
+                <ul class="p-0">
+                    <li class="text-primary-color mb-3 p-2" *ngFor="let tab of tabs" [routerLink]="[tab.route]"
+                        routerLinkActive="active">
+                        {{ tab.label | translate }}
+                    </li>
+
+
+                </ul>
+            </div>
+            <div class="col-12 col-lg-10">
+                <router-outlet></router-outlet>
+
+               
+            </div>
+        </div>
+    </div>
+</div>
