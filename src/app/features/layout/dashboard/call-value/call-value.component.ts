@@ -23,7 +23,7 @@ myApi = inject(MyApiService)
 
   ngOnInit() {
     this.myApi.callValues().subscribe((res:callType) => {
-      this.callValue=res.data
+      this.callValue=res?.data
     })
   
   }

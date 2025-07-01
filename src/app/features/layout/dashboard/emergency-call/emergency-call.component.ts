@@ -22,12 +22,12 @@ export class EmergencyCallComponent {
 
   ngOnInit() {
     this.myApi.getData().subscribe((res:call) => {
-      this.calls=res.data
+      this.calls=res?.data
     })
   
   }
   get displayedCalls() {
-  return this.showAll ? this.calls : this.calls.slice(0, 5);
+  return this.showAll ? this.calls : this.calls?.slice(0, 5);
 }
  ngOnDestroy() {
     if (this.subscription) {

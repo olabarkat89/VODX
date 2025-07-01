@@ -50,10 +50,11 @@
  
   </ng-container>
   </div>
-  @if( calls.length - displayedCalls.length >0)
+  @if(calls)
+ { @if( calls.length - displayedCalls.length >0)
 {    <h5 class="title text-center mt-3 mb-0" (click)="showAll = true">{{calls.length - displayedCalls.length}} {{'More'|translate}}</h5>
 }
   @if( calls.length - displayedCalls.length == 0)
 {    <h5 class="title text-center mt-3 mb-0" (click)="showAll = false">{{'less'|translate}}</h5>
-}
+}}
 </div>
