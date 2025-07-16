@@ -11,6 +11,7 @@ import { PersonalInfoComponent } from './features/layout/setting/personal-info/p
 import { AudioComponent } from './features/layout/setting/audio/audio.component';
 import { UserDataComponent } from './features/layout/setting/personal-info/user-data/user-data.component';
 import { WORKHOURSComponent } from './features/layout/setting/workhours/workhours.component';
+import { CalenderComponent } from './features/layout/calender/calender.component';
 
 export const routes: Routes = [
     {
@@ -40,7 +41,7 @@ export const routes: Routes = [
                    { path: 'workHourse', component:WORKHOURSComponent }
                 ]
             },
-
+            {path:'calender',component:CalenderComponent}
 
 
         ],
