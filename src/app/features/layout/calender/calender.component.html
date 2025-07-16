@@ -26,7 +26,8 @@
             (hourSegmentClicked)="onDayClick($event.date)">
         </mwl-calendar-week-view>
 
-        <mwl-calendar-day-view *ngSwitchCase="CalendarView.Day" [viewDate]="viewDate" [events]="events">
+        <mwl-calendar-day-view *ngSwitchCase="CalendarView.Day" [viewDate]="viewDate" [events]="events"
+         (hourSegmentClicked)="onDayClick($event.date)">
         </mwl-calendar-day-view>
         <div *ngSwitchCase="'year'" class="text-center text-xl text-gray-600">
             Custom Year View
