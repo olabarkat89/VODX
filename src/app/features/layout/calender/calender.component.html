@@ -27,7 +27,7 @@
 
         </div>
         <!-- Calendar View -->
-      <ng-container [ngSwitch]="view">
+        <ng-container [ngSwitch]="view">
             <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate" [events]="events"
                 (dayClicked)="onDayClick($event.day)">
             </mwl-calendar-month-view>
@@ -64,8 +64,9 @@
             </ng-select>
 
             <div class="mt-3">
-                <p-calendar [inline]="true" [showWeek]="true" formControlName="start">
+                <p-calendar [inline]="true" [showWeek]="true" [showTime]="true" hourFormat="24" formControlName="start">
                 </p-calendar>
+
             </div>
         </form>
 
