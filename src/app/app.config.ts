@@ -6,6 +6,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -22,13 +23,13 @@ export const appConfig: ApplicationConfig = {
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
         },
-        defaultLanguage:localStorage.getItem('lang') || 'en',
+        defaultLanguage: localStorage.getItem('lang') || 'en',
       }),
       CalendarModule.forRoot({
-      provide: DateAdapter,
-      useFactory: adapterFactory,
-    }),
-      
-    )
+        provide: DateAdapter,
+        useFactory: adapterFactory,
+      }),
+    ), 
+    provideAnimations()
   ]
 };

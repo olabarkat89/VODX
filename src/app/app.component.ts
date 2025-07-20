@@ -6,7 +6,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NgApexchartsModule,TranslateModule,],
+  imports: [RouterOutlet,NgApexchartsModule,TranslateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

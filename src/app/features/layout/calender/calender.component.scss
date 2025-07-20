@@ -1,15 +1,27 @@
- button {
-      padding: 0.5rem 1rem;
-      border: none;
-      background-color: white;
-      cursor: pointer;
-      border-radius: 2px;
-    }
-    .active {
-      background-color: rgba(222, 222, 222, 0.993);
-      color: white;
-    }
-    .radius{
-        border-radius: 8px;
-    }
+ .date {
+   padding: 0.5rem 1rem;
+   border: none;
+   background-color: white;
+   cursor: pointer;
+   border-radius: 2px;
+ }
+
+ .active {
+   background-color: rgba(167, 166, 166, 0.993);
+ }
+
+ .radius {
+   border-radius: 4px;
+ }
+ :host ::ng-deep {
+  .p-calendar{
+    width: 100%;
+  }
+ }
  
+ @media(min-width:500px){
+  .containerDate{
+    display: flex;
+    justify-content: space-between;
+  }
+ }
