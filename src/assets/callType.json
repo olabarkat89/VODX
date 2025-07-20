@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "type": "Incoming_calls",
+      "value": "0"
+    },
+    {
+      "type": "Abandoned_calls",
+      "value": "100"
+    },
+    {
+      "type": "Answered_calls",
+      "value": "10"
+    },
+       {
+      "type": "Total_call_duration",
+      "value": "10"
+    }
+  ]
+}

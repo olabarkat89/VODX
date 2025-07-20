@@ -1,15 +1,15 @@
 <apx-chart
-  [series]="chartOptions.series"
-  [chart]="chartOptions.chart"
-  [xaxis]="chartOptions.xaxis"
-  [yaxis]="chartOptions.yaxis"
-  [fill]="chartOptions.fill"
-  [stroke]="chartOptions.stroke"
-  [dataLabels]="chartOptions.dataLabels"
-  [tooltip]="chartOptions.tooltip"
-  [legend]="chartOptions.legend"
-  [title]="chartOptions.title"
-    [colors]="chartOptions.colors" 
+  [series]="chartOptions?.series"
+  [chart]="chartOptions?.chart"
+  [xaxis]="chartOptions?.xaxis"
+  [yaxis]="chartOptions?.yaxis"
+  [fill]="chartOptions?.fill"
+  [stroke]="chartOptions?.stroke"
+  [dataLabels]="chartOptions?.dataLabels"
+  [tooltip]="chartOptions?.tooltip"
+  [legend]="chartOptions?.legend"
+  [title]="chartOptions?.title"
+    [colors]="chartOptions?.colors" 
 ></apx-chart>
 
 
@@ -18,15 +18,15 @@
     <div class="row">
       <div class="col-12 col-md-6 col-lg-4" *ngFor="let emotionChart of emotionCharts">
           <apx-chart
-            [series]="emotionChart.series"
-            [chart]="emotionChart.chart"
-            [yaxis]="emotionChart.yaxis"
-            [fill]="emotionChart.fill"
-            [stroke]="emotionChart.stroke"
-            [dataLabels]="emotionChart.dataLabels"
-            [tooltip]="emotionChart.tooltip"
-            [legend]="emotionChart.legend"
-            [colors]="emotionChart.colors"
+            [series]="emotionChart?.series"
+            [chart]="emotionChart?.chart"
+            [yaxis]="emotionChart?.yaxis"
+            [fill]="emotionChart?.fill"
+            [stroke]="emotionChart?.stroke"
+            [dataLabels]="emotionChart?.dataLabels"
+            [tooltip]="emotionChart?.tooltip"
+            [legend]="emotionChart?.legend"
+            [colors]="emotionChart?.colors"
           ></apx-chart>
         </div>
     </div>

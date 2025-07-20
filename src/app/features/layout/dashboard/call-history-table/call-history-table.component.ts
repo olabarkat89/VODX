@@ -19,6 +19,7 @@ export class CallHistoryTableComponent {
 
   ngOnInit() {
     this.myApi.getData().subscribe((res:call) => {
+      console.log("Res",res)
       this.calls=res?.data
     })
   

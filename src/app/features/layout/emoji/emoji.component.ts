@@ -110,7 +110,7 @@ export class EmojiComponent {
   creatChart() {
     Chart.register(...registerables);
 
-    const labels = this.emotionData.map(d => d.timestamp || d.time.toString());
+    const labels = this.emotionData.map(d => d?.timestamp || d?.time.toString());
 
     this.chart = new Chart(this.chartRef.nativeElement.getContext('2d')!, {
       type: 'line',
@@ -119,7 +119,7 @@ export class EmojiComponent {
         datasets: [
           {
             label: 'Angry',
-            data: this.emotionData.map(d => d.angry),
+            data: this.emotionData.map(d => d?.angry),
             borderColor: '#ff4560',
             backgroundColor: '#ff4560',
             fill: false,
@@ -127,7 +127,7 @@ export class EmojiComponent {
           },
           {
             label: 'Disgust',
-            data: this.emotionData.map(d => d.disgust),
+            data: this.emotionData.map(d => d?.disgust),
             borderColor: '#775dd0',
             backgroundColor: '#775dd0',
             fill: false,
@@ -135,7 +135,7 @@ export class EmojiComponent {
           },
           {
             label: 'Fear',
-            data: this.emotionData.map(d => d.fear),
+            data: this.emotionData.map(d => d?.fear),
             borderColor: '#1f6feb',
             backgroundColor: '#1f6feb',
             fill: false,
@@ -143,7 +143,7 @@ export class EmojiComponent {
           },
           {
             label: 'Happy',
-            data: this.emotionData.map(d => d.happy),
+            data: this.emotionData.map(d => d?.happy),
             borderColor: '#00e396',
             backgroundColor: '#00e396',
             fill: false,
@@ -151,7 +151,7 @@ export class EmojiComponent {
           },
           {
             label: 'Neutral',
-            data: this.emotionData.map(d => d.neutral),
+            data: this.emotionData.map(d => d?.neutral),
             borderColor: '#008ffb',
             backgroundColor: '#008ffb',
             fill: false,
@@ -159,7 +159,7 @@ export class EmojiComponent {
           },
           {
             label: 'Sad',
-            data: this.emotionData.map(d => d.sad),
+            data: this.emotionData.map(d => d?.sad),
             borderColor: 'gray',
             backgroundColor: 'gray',
             fill: false,
@@ -167,7 +167,7 @@ export class EmojiComponent {
           },
           {
             label: 'Surprise',
-            data: this.emotionData.map(d => d.surprise),
+            data: this.emotionData.map(d => d?.surprise),
             borderColor: 'orange',
             backgroundColor: 'orange',
             fill: false,

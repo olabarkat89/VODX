@@ -1,0 +1,41 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "name": "أحمد",
+      "status": "answered",
+      "date": "2025-07-16T10:30:00Z",
+      "duration": "00:05:23"
+    },
+    {
+      "name": "فاطمة",
+      "status": "missed",
+      "date": "2025-07-15T14:12:00Z",
+      "duration": "00:00:00"
+    },
+    {
+      "name": "محمد",
+      "status": "rejected",
+      "date": "2025-07-14T08:45:00Z",
+      "duration": "00:01:10"
+    },
+        {
+      "name": "أحمد",
+      "status": "answered",
+      "date": "2025-07-16T10:30:00Z",
+      "duration": "00:05:23"
+    },
+    {
+      "name": "فاطمة",
+      "status": "missed",
+      "date": "2025-07-15T14:12:00Z",
+      "duration": "00:00:00"
+    },
+    {
+      "name": "محمد",
+      "status": "rejected",
+      "date": "2025-07-14T08:45:00Z",
+      "duration": "00:01:10"
+    }
+  ]
+}
