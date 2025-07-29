@@ -1,7 +1,7 @@
 <div class="p-4">
     <div class="containerDate my-3">
-        <h5 class="title fs-2"> Appointments</h5>
-        <button class="dl-btn dl-btn--outline dl-btn--icon px-3" (click)="onDayClick()">Create <i
+        <h5 class="title fs-2"> {{'Appointments'|translate}}</h5>
+        <button class="dl-btn dl-btn--outline dl-btn--icon px-3" (click)="onDayClick()">{{'Create'|translate}} <i
                 class="bi bi-plus-lg"></i> </button>
     </div>
     <div class="date radius py-5">
@@ -16,13 +16,13 @@
             <!-- View Switcher -->
             <div class="flex gap-2 mb-4 border radius bg-white">
                 <button class="date" (click)="view = CalendarView.Day"
-                    [class.active]="view === CalendarView.Day">Day</button>
+                    [class.active]="view === CalendarView.Day">{{'Day'|translate}}</button>
                 <button class="date" (click)="view = CalendarView.Week"
-                    [class.active]="view === CalendarView.Week">Week</button>
-                <button class="date" (click)="view = 'year'" [class.active]="view === 'year'">Work Week</button>
+                    [class.active]="view === CalendarView.Week">{{'Week'|translate}}</button>
+                <button class="date" (click)="view = 'year'" [class.active]="view === 'year'">{{'Work_Week' |translate}}</button>
 
                 <button class="date" (click)="view = CalendarView.Month"
-                    [class.active]="view === CalendarView.Month">Month</button>
+                    [class.active]="view === CalendarView.Month">{{'Month'|translate}}</button>
             </div>
 
         </div>
@@ -50,30 +50,35 @@
 {<div class="offcanvas offcanvas-end show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
     style="width: 35%;">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">New appointment</h5>
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">{{'New_appointment' | translate}}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
             (click)="onDayClick()"></button>
     </div>
     <div class="offcanvas-body">
         <form [formGroup]="form">
 
-            <input class="dl-input" type="text" placeholder="Event name" formControlName="title" />
+            <input class="dl-input" type="text" [placeholder]="'Event_name' |translate" formControlName="title" />
 
             <ng-select class="mt-3" [multiple]="true" [items]="userList" bindLabel="name" bindValue="id"
-                placeholder="select User" formControlName="users">
+                [placeholder]="'select_User' |translate" formControlName="users">
             </ng-select>
 
             <div class="mt-3">
-                <p-calendar [inline]="true" [showWeek]="true" [showTime]="true" hourFormat="24" formControlName="start">
-                </p-calendar>
+          <p-calendar
+  [inline]="true"
+  [showWeek]="true"
+  [showTime]="true"
+  hourFormat="24"
+  formControlName="start">
+</p-calendar>
 
             </div>
         </form>
 
         <div class="d-flex justify-content-end mt-3">
-            <button class="dl-btn dl-btn--outline mx-3" (click)="onDayClick()">Cancel</button>
-            <button *ngIf="type == 'add'" class="dl-btn dl-btn--primary " (click)="addEvent()">Save</button>
-            <button *ngIf="type != 'add'" class="dl-btn dl-btn--primary " (click)="updateEvent()">Updated</button>
+            <button class="dl-btn dl-btn--outline mx-3" (click)="onDayClick()">{{'Cancel'|translate}}</button>
+            <button *ngIf="type == 'add'" class="dl-btn dl-btn--primary " (click)="addEvent()">{{'Save'|translate}}</button>
+            <button *ngIf="type != 'add'" class="dl-btn dl-btn--primary " (click)="updateEvent()">{{'Updated'|translate}}</button>
 
 
         </div>

@@ -13,15 +13,32 @@
  .radius {
    border-radius: 4px;
  }
+
  :host ::ng-deep {
-  .p-calendar{
-    width: 100%;
-  }
+   .p-calendar {
+     width: 100%;
+   }
+
+   :lang(ar) {
+
+     .p-datepicker .p-datepicker-header .p-datepicker-prev,
+     .p-datepicker .p-datepicker-header .p-datepicker-next,
+     .bi-chevron-left::before,.bi-chevron-right::before
+     
+     {
+
+       transform: rotateZ(180deg);
+     }
+     .offcanvas-header .btn-close {
+    margin-right: auto;
+    margin-left: unset;
+}
+   }
  }
- 
- @media(min-width:500px){
-  .containerDate{
-    display: flex;
-    justify-content: space-between;
-  }
+
+ @media(min-width:500px) {
+   .containerDate {
+     display: flex;
+     justify-content: space-between;
+   }
  }

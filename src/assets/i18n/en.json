@@ -57,5 +57,17 @@
      "Personal-Information":"Personal information",
      "Audio and video":"Audio and video",
      "Working-hours":" Working hours",
-     "Calender":"Calender"
+     "Calender":"Calender",
+     "Appointments":"Appointments",
+     "Day":"Day",
+     "Week":"Week",
+     "Work_Week":"Work Week",
+     "Month":"Month",
+     "New_appointment":"New appointment",
+     "Event_name":"Event name",
+     "select_User":"select User",
+     "Cancel":"Cancel",
+     "Save":"Save",
+     "Updated":"Updated",
+     "Create":"Create"
 }

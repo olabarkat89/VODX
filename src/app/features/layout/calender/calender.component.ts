@@ -8,10 +8,12 @@ import { CalendarModule as PrimeNGCalendarModule } from 'primeng/calendar';
 import { MyApiService } from '../../service/my-api.service';
 import { Subject } from 'rxjs';
 import { EventService } from './event.service';
+import { PrimeNGConfig } from 'primeng/api';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-calender',
   standalone: true,
-  imports: [CommonModule, CalendarModule, PrimeNGCalendarModule, NgSelectModule, ReactiveFormsModule
+  imports: [CommonModule,TranslateModule ,CalendarModule, PrimeNGCalendarModule, NgSelectModule, ReactiveFormsModule
   ],
   templateUrl: './calender.component.html',
   styleUrl: './calender.component.scss'
@@ -30,8 +32,35 @@ export class CalenderComponent {
     { id: 2, name: 'فاطمة' },
     { id: 3, name: 'محمد' },
   ];
+  calendarTranslations = {
+  ar: {
+    firstDayOfWeek: 6,
+    dayNames: ['السبت','الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة'],
+    dayNamesShort: ['سبت','أحد','إثن','ثلاث','أربع','خميس','جمعة'],
+    dayNamesMin: ['س','ح','ن','ث','ر','خ','ج'],
+    monthNames: ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'],
+    monthNamesShort: ['ينا','فبر','مار','أبر','ماي','يون','يول','أغس','سبت','أكت','نوف','ديس'],
+    today: 'اليوم',
+    clear: 'مسح',
+    dateFormat: 'dd/mm/yy',
+    weekHeader: 'الأسبوع'
+  },
+  en: {
+    firstDayOfWeek: 0,
+    dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    dayNamesShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+    dayNamesMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+    monthNames: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+    monthNamesShort: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+    today: 'Today',
+    clear: 'Clear',
+    dateFormat: 'mm/dd/yy',
+    weekHeader: 'Wk'
+  }
+};
   form!: FormGroup
-  constructor(private fb: FormBuilder, private myApi: MyApiService, private eventService: EventService) {
+  constructor(private fb: FormBuilder, private myApi: MyApiService, private eventService: EventService , private primengConfig: PrimeNGConfig,
+  protected translate: TranslateService) {
     this.form = this.fb.group({
       title: ['', Validators.required],
       users: [[], Validators.required],
@@ -41,6 +70,13 @@ export class CalenderComponent {
 
   ngOnInit(): void {
     this.getEvent()
+this.changeLangCalender
+
+  }
+  changeLangCalender(){
+ const lang = (this.translate.currentLang || this.translate.getDefaultLang() || 'ar').split('-')[0];
+const translation = this.calendarTranslations[lang as 'ar' | 'en'] || this.calendarTranslations.ar;
+this.primengConfig.setTranslation(translation);
   }
   getEvent() {
     this.eventService.events$.subscribe(events => {
@@ -59,6 +95,8 @@ export class CalenderComponent {
     return format(date, 'MMMM yyyy');
   }
   onDayClick(date?: any): void {
+    console.log("lang",this.translate.currentLang )
+    this.changeLangCalender()
     this.form.reset()
     this.selectValue = date
     if (date?.events?.length > 0) {

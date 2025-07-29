@@ -54,7 +54,18 @@
   "Chats": "الدردشات",
 "Chat Notes": "ملاحظات الدردشة",
 "Search for documents": "البحث عن المستندات",
-"Calender":"التقويم"
-
+"Calender":"التقويم",
+  "Appointments": "المواعيد",
+  "Day": "يوم",
+  "Week": "أسبوع",
+  "Work_Week": "أسبوع العمل",
+  "Month": "شهر",
+  "New_appointment": "موعد جديد",
+  "Event_name": "اسم الحدث",
+  "select_User": "اختر المستخدم",
+  "Cancel": "إلغاء",
+  "Save": "حفظ",
+  "Updated": "تم التحديث",
+   "Create":"اضافه"
 
 }
