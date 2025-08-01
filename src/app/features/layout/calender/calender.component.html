@@ -59,10 +59,13 @@
 
             <input class="dl-input" type="text" [placeholder]="'Event_name' |translate" formControlName="title" />
 
-            <ng-select class="mt-3" [multiple]="true" [items]="userList" bindLabel="name" bindValue="id"
-                [placeholder]="'select_User' |translate" formControlName="users">
-            </ng-select>
-
+           <p-multiSelect 
+            class="mt-3"
+    [options]="userList" 
+    formControlName="users"
+    optionLabel="name" 
+    optionValue="id"
+     [placeholder]="'select_User' |translate" />
             <div class="mt-3">
           <p-calendar
   [inline]="true"

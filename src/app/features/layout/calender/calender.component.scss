@@ -18,21 +18,25 @@
    .p-calendar {
      width: 100%;
    }
-
+.p-multiselect {
+  
+    width: 100%;
+    margin-top: 1rem;
+}
    :lang(ar) {
 
      .p-datepicker .p-datepicker-header .p-datepicker-prev,
      .p-datepicker .p-datepicker-header .p-datepicker-next,
-     .bi-chevron-left::before,.bi-chevron-right::before
-     
-     {
+     .bi-chevron-left::before,
+     .bi-chevron-right::before {
 
        transform: rotateZ(180deg);
      }
+
      .offcanvas-header .btn-close {
-    margin-right: auto;
-    margin-left: unset;
-}
+       margin-right: auto;
+       margin-left: unset;
+     }
    }
  }
 

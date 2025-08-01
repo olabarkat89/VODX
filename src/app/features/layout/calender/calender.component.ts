@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { NgSelectModule } from '@ng-select/ng-select';
 import { CalendarDayViewComponent, CalendarEvent, CalendarModule, CalendarMonthViewComponent, CalendarView, CalendarWeekViewComponent } from 'angular-calendar';
 import { addMonths, format, subMonths } from 'date-fns';
 import { CalendarModule as PrimeNGCalendarModule } from 'primeng/calendar';
@@ -10,11 +9,12 @@ import { Subject } from 'rxjs';
 import { EventService } from './event.service';
 import { PrimeNGConfig } from 'primeng/api';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { MultiSelectModule } from 'primeng/multiselect';
+
 @Component({
   selector: 'app-calender',
   standalone: true,
-  imports: [CommonModule,TranslateModule ,CalendarModule, PrimeNGCalendarModule, NgSelectModule, ReactiveFormsModule
-  ],
+  imports: [CommonModule,TranslateModule ,CalendarModule, PrimeNGCalendarModule, ReactiveFormsModule,MultiSelectModule],
   templateUrl: './calender.component.html',
   styleUrl: './calender.component.scss'
 })
